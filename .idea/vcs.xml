@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ch13UtilityTraits/ch13" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ch14Closures" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ch15Iterators" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ch9Structs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/expr_1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/learn1/learn1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mandelbrot" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/qreplace" vcs="Git" />
+  </component>
+</project>

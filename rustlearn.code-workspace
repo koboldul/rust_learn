@@ -1,0 +1,53 @@
+{
+	"folders": [
+		{
+			"path": "qreplace"
+		},
+		{
+			"path": "learn1"
+		},
+		{
+			"path": "../iniedit"
+		},
+		{
+			"path": "mandelbrot"
+		},
+		{
+			"path": "ch04_moves"
+		},
+		{
+			"path": "ch05_references"
+		},
+		{
+			"path": "ch07_error_handling"
+		},
+		{
+			"path": "ch09_structs"
+		},
+		{
+			"path": "ch11_traits"
+		},
+		{
+			"path": "ch13_utility_traits"
+		},
+		{
+			"path": "ch14_closures"
+		},
+		{
+			"path": "ch15_iterators"
+		},
+		{
+			"path": "ch16_collections"
+		},
+		{
+			"path": "ch17_strings"
+		},
+		{
+			"path": "ch19_concurrency"
+		},
+		{
+			"path": "ch20_async"
+		}
+	],
+	"settings": {}
+}
