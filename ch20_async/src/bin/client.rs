@@ -9,7 +9,7 @@ use async_std::task;
 fn main() -> ChatResult<()> {
     let address = std::env::args().nth(1).expect("Usage: client ADDRESS:PORT");
     task::block_on(async {
-        let mut socket = net::TcpStream::connect(address).await?;
+        let socket = net::TcpStream::connect(address).await?;
         socket.set_nodelay(true)?;
 
         let to_server = send_commands(socket.clone());
@@ -91,8 +91,8 @@ async fn handle_replies(from_server: net::TcpStream) -> ChatResult<()> {
     
     while let Some(reply) = reply_stream.next().await {
         match reply? {
-            FromServer::Message { group_name, mesaage } => {
-                println!("Message posted {}: {}", group_name, mesaage);
+            FromServer::Message { group_name, message } => {
+                println!("Message posted {}: {}", group_name, message);
             },
             FromServer::Error(error) => {
                 println!("Error: {}", error);

@@ -1,8 +1,8 @@
-use group::Group;
+use crate::group::Group;
 use std::sync::{Arc, Mutex};
 use std::collections::HashMap;
 
-pub struct GroupTable(Mutext<HashMap<Arc<String>, Arc<Group>>>);
+pub struct GroupTable(Mutex<HashMap<Arc<String>, Arc<Group>>>);
 
 impl GroupTable {
     pub fn new() -> Self {
@@ -13,7 +13,7 @@ impl GroupTable {
        self.0.lock()
         .unwrap()
         .get(name)
-        .cloned();
+        .cloned()
    }
 
    pub fn get_or_create(&self, name: Arc<String>) -> Arc<Group> {

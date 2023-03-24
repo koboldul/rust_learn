@@ -1,7 +1,9 @@
 use std::sync::Arc;
-use async_std::{channel::RecvError, task};
+use async_std::task;
 use ch20_async::FromServer;
-use tokio::sync::broadcast;
+use tokio::sync::broadcast::{self, error::RecvError};
+
+use crate::connection::Outbound;
 
 pub struct Group {
     name: Arc<String>,
@@ -15,12 +17,12 @@ impl Group {
     }
 
     pub fn join(&self, outbound: Arc<Outbound>) {
-        let mut receiver = self.sender.subscribe();
+        let receiver = self.sender.subscribe();
         task::spawn(handle_subscriber(self.name.clone(), receiver, outbound));
     }
 
     pub fn post(&self, message: Arc<String>) {
-        self.sender.send(message);
+        let _ = self.sender.send(message);
     }
 }
 
