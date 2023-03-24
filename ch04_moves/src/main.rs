@@ -51,7 +51,7 @@ fn test_vec_mv() {
 }
 
 fn take_rc_1(a: Rc<String>) {
-    println!("1: {}", a);
+    println!("1: {}", *a);
 }
 
 fn take_rc_2(a: Rc<String>) {
