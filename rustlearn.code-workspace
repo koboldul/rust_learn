@@ -47,6 +47,9 @@
 		},
 		{
 			"path": "ch20_async"
+		},
+		{
+			"path": "ch18_input"
 		}
 	],
 	"settings": {}

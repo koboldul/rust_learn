@@ -1,8 +1,8 @@
-use std::{thread, fmt::Error, panic};
+use std::{thread, panic};
 
 fn main() {
-    let _t = 23;
-    let _c = 0;
+    let t = 23;
+    let c = 0;
 
     let h = 
         thread::spawn(move || pirate_share(t, c));
